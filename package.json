@@ -5,7 +5,7 @@
   "type": "module",
   "lint-staged": {
     "*.ts": "eslint ./src --fix",
-    ".vue": "eslint ./src --fix"
+    "*.vue": "eslint ./src --fix"
   },
   "scripts": {
     "dev": "vite",
