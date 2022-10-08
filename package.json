@@ -4,14 +4,14 @@
   "version": "0.0.0",
   "type": "module",
   "lint-staged": {
-    "*.vue": "eslint ./src --fix",
-    "*.ts": "eslint ./src --fix"
+    "*.{vue,ts,cjs}": ["eslint ./src --fix", "vue-tsc --noEmit -p tsconfig.json"]
   },
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
-    "lint": "eslint --fix --ignore-path .gitignore"
+    "lint": "eslint --ext .vue,.ts --fix --ignore-path .gitignore",
+    "type-check": "vue-tsc --noEmit -p tsconfig.json"
   },
   "dependencies": {
     "vue": "^3.2.37"
