@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "lint-staged": {
-    "*.{vue,ts,cjs}": ["eslint ./src --fix", "vue-tsc --noEmit -p tsconfig.json"]
+    "*.{vue,ts}": ["eslint ./src --fix", "vue-tsc --noEmit -p tsconfig.json"]
   },
   "scripts": {
     "dev": "vite",
