@@ -1,7 +1,19 @@
 <script setup lang="ts">
-defineProps<{ msg: string }>()
+interface Props {
+  msg: string
+}
+const { msg } = defineProps<Props>()
 
-const count = $ref(0)
+const emit = defineEmits<{
+  (e: 'update:msg', value: string): void
+}>()
+
+let count = $ref(0)
+
+function onClick() {
+  count = count + 1
+  emit('update:msg', 'Hello vue')
+}
 </script>
 
 <template>
@@ -10,7 +22,7 @@ const count = $ref(0)
   </h1>
 
   <div class="card">
-    <button type="button" @click="count++">count is {{ count }}</button>
+    <button type="button" @click="onClick">count is {{ count }}</button>
     <p>
       Edit
       <code>components/HelloWorld.vue</code>

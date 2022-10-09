@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+let msg = $ref('Hello')
+</script>
 
 <template>
   <div>
@@ -9,7 +11,7 @@
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div>
-  <HelloWorld msg="Vite + Vue" />
+  <HelloWorld v-model:msg="msg" />
 </template>
 
 <style scoped></style>

@@ -2,18 +2,18 @@ import { RouteLocationNormalized, Router } from 'vue-router'
 
 import { router } from '..'
 
-type RouteMiddlewareFn = (
+export const defineRouteMiddleware =
+  (callback: RouteMiddlewareCallback) => (router: Router) => {
+    router.beforeEach(callback)
+  }
+
+export function runMiddlewares(...args: RouteMiddleware[]) {
+  args.forEach((arg) => arg(router))
+}
+
+type RouteMiddlewareCallback = (
   to: RouteLocationNormalized,
   from: RouteLocationNormalized
 ) => void
 
-function runMiddlewares(...middlewares: Function[]) {
-  middlewares.forEach((middleware) => middleware(router))
-}
-
-const defineRouteMiddleware =
-  (callback: RouteMiddlewareFn) => (router: Router) => {
-    router.beforeEach(callback)
-  }
-
-export { runMiddlewares, defineRouteMiddleware }
+type RouteMiddleware = ReturnType<typeof defineRouteMiddleware>
