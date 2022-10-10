@@ -11,7 +11,9 @@
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
     "lint": "eslint --ext .vue,.ts --fix --ignore-path .gitignore",
-    "type-check": "vue-tsc --noEmit -p tsconfig.json"
+    "type-check": "vue-tsc --noEmit -p tsconfig.json",
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
   },
   "dependencies": {
     "@vueuse/core": "^9.3.0",
@@ -24,6 +26,7 @@
     "@vitejs/plugin-vue": "^3.1.0",
     "@vue/eslint-config-prettier": "^7.0.0",
     "@vue/eslint-config-typescript": "^11.0.2",
+    "@vue/test-utils": "^2.1.0",
     "autoprefixer": "^10.4.12",
     "eslint": "^8.25.0",
     "eslint-import-resolver-typescript": "^3.5.1",
@@ -31,6 +34,7 @@
     "eslint-plugin-import-helpers": "^1.2.1",
     "eslint-plugin-vue": "^9.6.0",
     "husky": "^8.0.1",
+    "jsdom": "^20.0.1",
     "lint-staged": "^13.0.3",
     "postcss": "^8.4.17",
     "prettier": "^2.7.1",
@@ -45,6 +49,7 @@
     "vite": "^3.1.0",
     "vite-plugin-pages": "^0.26.0",
     "vite-plugin-vue-layouts": "^0.7.0",
+    "vitest": "^0.24.0",
     "vue-tsc": "^0.40.4"
   }
 }
