@@ -18,9 +18,11 @@
   "dependencies": {
     "@vueuse/core": "^9.3.0",
     "vue": "^3.2.37",
+    "vue-i18n": "9",
     "vue-router": "4.1.0"
   },
   "devDependencies": {
+    "@intlify/vite-plugin-vue-i18n": "^6.0.3",
     "@rushstack/eslint-patch": "^1.2.0",
     "@typescript-eslint/parser": "^5.39.0",
     "@vitejs/plugin-vue": "^3.1.0",
@@ -38,6 +40,7 @@
     "lint-staged": "^13.0.3",
     "postcss": "^8.4.17",
     "prettier": "^2.7.1",
+    "sass": "^1.55.0",
     "stylelint": "^14.13.0",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-prettier-scss": "^0.0.1",

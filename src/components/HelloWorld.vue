@@ -2,11 +2,13 @@
 interface Props {
   msg: string
 }
-const { msg } = defineProps<Props>()
 
+const { msg } = defineProps<Props>()
 const emit = defineEmits<{
   (e: 'update:msg', value: string): void
 }>()
+
+const { t } = useI18n()
 
 let count = $ref(0)
 
@@ -22,7 +24,9 @@ function onClick() {
   </h1>
 
   <div class="card">
-    <button type="button" @click="onClick">count is {{ count }}</button>
+    <button type="button" @click="onClick">
+      {{ t('count') }} is {{ count }}
+    </button>
     <p>
       Edit
       <code>components/HelloWorld.vue</code>
@@ -49,3 +53,8 @@ function onClick() {
   color: #888;
 }
 </style>
+
+<i18n>
+en:
+  count: counter
+</i18n>

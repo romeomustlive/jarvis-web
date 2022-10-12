@@ -12,7 +12,10 @@
     "esModuleInterop": true,
     "lib": ["ESNext", "DOM"],
     "skipLibCheck": true,
-    "types": ["vite-plugin-vue-layouts/client"]
+    "types": ["vite-plugin-vue-layouts/client", "@intlify/vite-plugin-vue-i18n/client"]
+  },
+  "paths": {
+    "@/*": ["./src/*"]
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "tests/**/*.spec.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
