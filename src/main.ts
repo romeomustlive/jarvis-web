@@ -12,7 +12,7 @@ import 'primeflex/primeflex.css'
 import './assets/styles/index.scss'
 
 const i18n = createI18n({
-  locale: 'en',
+  locale: 'ru',
   messages,
 })
 
