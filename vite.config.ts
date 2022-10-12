@@ -19,7 +19,14 @@ export default defineConfig({
     Layouts(),
     AutoImport({
       dts: 'src/auto-imports.d.ts',
-      imports: ['vue', 'vue-router', 'vue/macros', '@vueuse/core', 'vue-i18n'],
+      imports: [
+        'vue',
+        'vue-router',
+        'vue/macros',
+        '@vueuse/core',
+        'vue-i18n',
+        'vee-validate',
+      ],
     }),
     Components({
       dts: 'src/components.d.ts',
