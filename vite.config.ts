@@ -3,6 +3,7 @@ import Vue from '@vitejs/plugin-vue'
 import { fileURLToPath, URL } from 'node:url'
 import path from 'path'
 import AutoImport from 'unplugin-auto-import/vite'
+import { PrimeVueResolver } from 'unplugin-vue-components/resolvers'
 import Components from 'unplugin-vue-components/vite'
 import { defineConfig } from 'vite'
 import Pages from 'vite-plugin-pages'
@@ -22,6 +23,7 @@ export default defineConfig({
     }),
     Components({
       dts: 'src/components.d.ts',
+      resolvers: [PrimeVueResolver()],
     }),
     vueI18n({
       compositionOnly: true,
