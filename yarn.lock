@@ -2986,6 +2986,16 @@ prettier@^2.7.1:
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.7.1.tgz#e235806850d057f97bb08368a4f7d899f7760c64"
   integrity sha512-ujppO+MkdPqoVINuDFDRLClm7D78qbDt0/NR+wp5FqEZOoTNAjPHWj17QRhu7geIHJfcNhRk1XVQmF8Bp3ye+g==
 
+primeflex@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/primeflex/-/primeflex-3.2.1.tgz#dc557b7e895dd0496a3681fb0d8841d2ddca5abf"
+  integrity sha512-sGDJ4mh2fG19xa1yc4IPGSQ8MUMyu5nU+tYnl27AFuFHhX8XwEA7fWCtWyBbclclVhXtre+Kf9WobWPnfxWAEQ==
+
+primevue@^3.17.0:
+  version "3.17.0"
+  resolved "https://registry.yarnpkg.com/primevue/-/primevue-3.17.0.tgz#42936873808966a3eaf48345efcbad37262cff39"
+  integrity sha512-z7ZCHk4kgkHJ29hg0izN1M8Xst2MOObimq62waE2TDE8ztH9mp2sAdGGsQu1shMa4/23dZ+fcN4t+KpYNICRyQ==
+
 psl@^1.1.33:
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/psl/-/psl-1.9.0.tgz#d0df2a137f00794565fcaf3b2c00cd09f8d5a5a7"
